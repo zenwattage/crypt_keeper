@@ -1,0 +1,276 @@
+/* @font-face {
+  font-family: matrixFont;
+  src: url(./matrixFont.ttf);
+} */
+
+input {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgb(32, 30, 30) 2px 2px 1px 1px;
+}
+
+.textIcon {
+  padding-right: 10px;
+  color: rgba(79, 199, 250, 0.979);
+  display: flex;
+  flex-direction: column;
+}
+
+.keyIcon {
+  padding-right: 5px;
+  color: rgba(79, 199, 250, 0.979);
+}
+
+.cryptIcon {
+  /* padding-right: 10px; */
+  color: rgba(79, 199, 250, 0.979);
+  padding-right: 10px;
+}
+
+.inputContainers {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.encryptContainer,
+.decryptContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* background-color: aqua; */
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.encryptKeyContainer,
+.decryptKeyContainer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+}
+
+.encryptTextArea,
+.decryptTextArea {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: rgba(96, 199, 243, 0.651);
+  background-image: url('./images/colors.png');
+
+  align-items: center;
+  justify-content: flex-start;
+  height: 170px;
+  width: 500px;
+  box-shadow: black 2px 2px 1px 1px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: x-large;
+}
+
+.encryptKeyInput,
+.decryptKeyInput {
+  color: white;
+  width: 500px;
+  background-color: rgba(96, 199, 243, 0.651);
+  background-image: url('./images/colors.png');
+  font-size: large;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.highlight {
+  background-color: #ffcccc;
+  border-color: #ff3333;
+  box-shadow: #f50fa8 3px 3px 1px 1px;
+}
+
+.encryptTextAreaContainer,
+.decryptTextAreaContainer {
+  /* color: white; */
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: red; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 500px;
+  height: 200px;
+}
+
+.buttonContainer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(0, 255, 106); */
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pasteButtonContainer {
+  display: flex;
+  flex-direction: column;
+  float: flex-start;
+}
+.pasteButton {
+  border-radius: 10px;
+  background-image: url('./images/colors.png');
+  width: 40px;
+  box-shadow: black 2px 2px 1px 1px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: x-small;
+  float: left;
+  margin-top: 2px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.copyButtonContainer {
+  color: white;
+  padding-top: 10px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(0, 255, 106); */
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  float: left;
+}
+
+.encryptButtonContainer,
+.decryptButtonContainer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(0, 255, 106); */
+  align-items: center;
+  justify-content: center;
+  /* flex-grow: 1; */
+  padding-left: 10px;
+}
+
+/* button {
+  color: white;
+  text-shadow: black 2px 2px 1px 1px;
+  align-content: center;
+  padding: 8px;
+  margin: 10px;
+  font-size: 0.8em;
+  border-radius: 10px;
+  width: 170px;
+  font-size: large;
+  background-image: url('./images/colors.png');
+  box-shadow: black 2px 2px 1px 1px;
+  /* width: 400px; */
+/* } */
+
+.copyButton,
+.resetButton {
+  border-radius: 10px;
+  background-image: url('./images/colors.png');
+  width: 40px;
+  padding: 8px;
+  margin-top: 7px;
+  margin-right: 5px;
+  background-color: rgba(96, 199, 243, 0.116);
+  border-color: black;
+  box-shadow: black 2px 2px 1px 1px;
+  font-size: x-small;
+}
+
+.resetButton {
+  font-size: xx-small;
+}
+
+.copyButton,
+.resetButton,
+.pasteButton {
+  color: rgba(79, 199, 250, 0.979);
+}
+
+.encryptButton,
+.decryptButton {
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: black 2px 2px 1px 1px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  font-size: large;
+  background-image: url('./images/colors.png');
+}
+/* 
+.encryptOutput {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgba(96, 199, 243, 0.651); */
+/* align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 450px;
+  border-radius: 10px;
+  padding-left: 0px;
+  padding-right: 5px;
+  word-break: break-all;
+  font-size: large; */
+/* } */
+
+.encryptOutputTextArea,
+.decryptOutputTextArea {
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(96, 199, 243, 0.651);
+  background-image: url('./images/colors.png');
+  /* opacity: 0.8; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: black 2px 2px 1px 1px;
+  font-size: large;
+  width: 350px;
+  height: 100px;
+}
