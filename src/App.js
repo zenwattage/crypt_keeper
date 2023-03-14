@@ -11,8 +11,6 @@ function App() {
       <div className="inputContainers">
         <SingleComponent />
       </div>
-
-
     </div>
   );
 }
