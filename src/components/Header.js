@@ -2,9 +2,6 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import logo from "../images/lightcolorlogo.png";
-// import logo from "../images/darkfrontlightbacklogo.png"
-// import logo from "../images/darkfrontlightbacklogo2.png"
 import logo from "../images/lightlogo.png"
 import "./header.css";
 

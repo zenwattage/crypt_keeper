@@ -1,28 +1,18 @@
-import React, { useState, useRef } from 'react';
+
+import { React, useState, useRef } from 'react';
 import axios from 'axios';
 import { BsFillKeyFill } from 'react-icons/bs';
-import { BsFillChatLeftTextFill } from 'react-icons/bs';
 import { BsFillUnlockFill } from 'react-icons/bs';
 import { BsFillShieldLockFill } from 'react-icons/bs';
-import { BsFillClipboardFill } from 'react-icons/bs';
 import { FaClipboard } from 'react-icons/fa';
-import { SiLetsencrypt } from "react-icons/si";
 import { BsArrowRepeat } from "react-icons/bs";
 
-
 function EncryptionExample() {
-    const [text, setText] = useState('');
-    const [password, setPassword] = useState('');
-    const [encryptedText, setEncryptedText] = useState('');
-
     //button states
     const [encryptedButtonState, setEncryptedButtonState] = useState(false);
     const [decryptedButtonState, setDecryptedButtonState] = useState(false);
-
-    const [decryptedText, setDecryptedText] = useState("");
     // state of output
     const [outputText, setOutputText] = useState('');
-
     // state of textarea
     const [textAreaValue, setTextAreaValue] = useState('');
     // state of password
@@ -30,25 +20,20 @@ function EncryptionExample() {
     //shake input if no key is provided
     const passwordInputRef = useRef();
 
-
     const handleTextAreaChange = (e) => {
         setTextAreaValue(e.target.value);
     };
 
     const handlePasswordChange = (e) => {
         setPasswordAreaValue(e.target.value);
-
     };
 
     const resetAll = () => {
         setEncryptedButtonState(false);
         setDecryptedButtonState(false);
-        setEncryptedText('');
-        setDecryptedText('');
-        setOutputText('');
-        setText('');
         setTextAreaValue('');
         setPasswordAreaValue('');
+        setOutputText('');
     }
 
     const handleEncryption = async () => {
@@ -62,7 +47,7 @@ function EncryptionExample() {
                 }, 500);
                 return;
             }
-            axios
+            axios //https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Encrypt-AD440Winter2023-V3
                 .post(
                     'https://6z6enqjxl8.execute-api.us-west-2.amazonaws.com/encryption',
                     { message: textAreaValue, key: passwordAreaValue }
@@ -84,6 +69,7 @@ function EncryptionExample() {
                     console.log(error.config);
                 });
             setEncryptedButtonState(true);
+            setDecryptedButtonState(false);
         } catch (error) {
             console.error(error);
         }
@@ -99,19 +85,18 @@ function EncryptionExample() {
                     passwordInputRef.current.classList.remove('shake', 'highlight'); // Remove the class after 500ms
                 }, 500);
                 return;
-            }
+            } //https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V3
             axios
                 .post(
                     "https://6z6enqjxl8.execute-api.us-west-2.amazonaws.com/decryption",
                     { encryptedMessage: textAreaValue, key: passwordAreaValue }
                 )
-
                 .then(function (response) {
                     if (response.data.decryptedMessage === "") {
                         setOutputText("Invalid Key or No key provided.");
+                    } else {
+                        setOutputText(response.data.decryptedMessage);
                     }
-                    console.log(response.data);
-                    setOutputText(response.data.decryptedMessage);
                 })
                 .catch(function (error) {
                     if (error.response) {
@@ -127,6 +112,7 @@ function EncryptionExample() {
                     console.log(error.config);
                 });
             setDecryptedButtonState(true);
+            setEncryptedButtonState(false);
         } catch (error) {
             console.error(error);
         }
@@ -136,11 +122,7 @@ function EncryptionExample() {
         <>
             <div className="encryptContainer">
                 <div className="encryptTextAreaContainer">
-                    <div className='textAreaIconContainer'>
-                        <p className="textIcon">
-                            <BsFillChatLeftTextFill size={40} />
-                        </p>
-
+                    <div className='pasteButtonContainer'>
                         <button
                             className="pasteButton"
                             // onClick={() => navigator.clipboard.writeText(`${outputText}`)}
@@ -151,13 +133,12 @@ function EncryptionExample() {
                         </button>
                     </div>
                     <textarea
-                        aria-label="text"
+                        aria-label="encrypt_text"
                         value={textAreaValue}
                         className="encryptTextArea"
                         type="text"
                         onChange={handleTextAreaChange}
                         placeholder="Enter Your Message Here: "
-
                     />
                 </div>
                 <div className="encryptKeyContainer">
@@ -172,12 +153,9 @@ function EncryptionExample() {
                         onChange={handlePasswordChange}
                         ref={passwordInputRef}
                         placeholder="Enter Your Key Here: "
-
-                    // required
                     />
                 </div>
                 <div className="buttonContainer">
-                    <SiLetsencrypt size={20} className="cryptIcon" />
                     <div className="encryptButtonContainer">
                         <button className="encryptButton" onClick={handleEncryption}>
                             {encryptedButtonState ? (
@@ -210,9 +188,6 @@ function EncryptionExample() {
                         </button>
                     </div>
                 </div>
-
-
-
                 <div className="encryptOutput">
                     <div className="copyButtonContainer">
                         <button
@@ -227,8 +202,6 @@ function EncryptionExample() {
                             <BsArrowRepeat size={20} className="resetIcon" />
                             Reset
                         </button>
-
-
                     </div>
                     <textarea
                         aria-label="text"

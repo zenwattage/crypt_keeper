@@ -1,8 +1,16 @@
 body {
-  background-image: url('./images/colors.png');
+  /* background-image: url('./images/colors.png'); */
+  /* background-image: url('./images/social-networking-concept.jpg'); */
+  /* background-image: url('./images/networkConnections.jpg'); */
+  /* background-image: url('./images/conny-schneider-xuTJZ7uD7PI-unsplash.jpg'); */
+  /* background-image: url('./images/swirlconnections.jpg'); */
+  /* background-image: url('./images/codelocks.jpg'); */
+  /* background-image: url('./images/laptop.bmp'); */
+  /* background-image: url('./images/cyber-network.jpg'); */
+  /* background-image: url('./images/peakpx.jpg'); */
+  background-image: url('./images/ITAR.jpg');
   background-color: black;
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
