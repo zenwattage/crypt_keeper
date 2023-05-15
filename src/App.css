@@ -22,7 +22,8 @@
   width: 490px;
 }
 
-.encryptTextAreaContainer {
+.encryptTextAreaContainer,
+.encryptOutput {
   /* color: white; */
   display: flex;
   flex-direction: row;
@@ -102,7 +103,7 @@
   color: white;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* background-color: red; */
   align-items: center;
   justify-content: flex-start;
@@ -293,4 +294,269 @@
   background-image: url('./images/puterbanner.bmp');
   border-color: rgba(58, 191, 248, 0.986);
   box-shadow: rgba(141, 192, 235, 0.856) 4px 4px 1px 1px;
+}
+
+/* Responsive styles */
+/* @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .encryptKeyContainer {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 10px;
+  }
+
+  .encryptKeyInput {
+    width: 100%;
+  }
+
+  .encryptTextArea {
+    height: 20px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .encryptTextAreaContainer {
+    width: 100%;
+    margin-right: 0;
+    height: 40px;
+  }
+}
+
+@media screen and (max-height: 384px) and (orientation: landscape) {
+  .encryptContainer {
+    width: 50%;
+    height: 50vh;
+  }
+  .encryptTextAreaContainer {
+    width: 400px;
+  }
+
+  .encryptTextArea {
+    width: 40px;
+    float: right;
+  }
+
+  .pasteButton {
+    float: left;
+    margin-top: 0;
+  }
+
+  .encryptKeyContainer {
+    width: 50%;
+    padding-left: 5px;
+    margin-right: 0;
+    padding-top: 10px;
+  }
+
+  .encryptOutput {
+    align-items: center;
+  }
+
+  .copyButtonContainer {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .encryptOutputTextArea {
+    font-size: medium;
+    width: 70%;
+    margin-right: 0;
+  }
+} */
+
+/* @media screen and (max-width: 428px) {
+  .encryptKeyContainer {
+    width: 100%;
+    margin-right: 0;
+    padding-top: 10px;
+  }
+
+  .encryptOutputTextArea {
+    font-size: medium;
+    width: 70%;
+    margin-left: 5px;
+    margin-right: 0;
+    padding-left: 5px;
+  }
+}
+ */
+
+@media only screen and (max-width: 360px) {
+  .inputContainers {
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .encryptContainer {
+    width: 60%;
+    padding: 20px;
+  }
+
+  .encryptTextAreaContainer {
+    width: 100%;
+    margin-right: 0;
+    height: 110px;
+  }
+
+  .encryptKeyContainer {
+    width: 100%;
+    height: 30px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .pasteButtonContainer {
+    margin-right: 5px;
+    margin-left: 0;
+  }
+
+  .pasteButton {
+    margin-top: 10px;
+  }
+
+  .encryptTextArea {
+    font-size: medium;
+    height: 100px;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 5px;
+  }
+
+  .encryptKeyInput {
+    font-size: small;
+    width: 100%;
+    padding-top: 5px;
+    margin-left: 2px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  .buttonContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-left: 47px;
+  }
+
+  .encryptButtonContainer,
+  .decryptButtonContainer {
+    padding-left: 0;
+    width: 50%;
+  }
+
+  .encryptButton,
+  .decryptButton {
+    width: 50%;
+    height: 50%;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .encryptedIcon,
+  .decryptedIcon {
+    scale: 0.6;
+    justify-content: center;
+  }
+
+  .copyButtonContainer {
+    width: 10%;
+    padding-right: 0;
+    margin-right: 5px;
+  }
+
+  .encryptOutput {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .encryptOutputTextArea {
+    font-size: medium;
+    width: 70%;
+    margin-left: 5px;
+    margin-right: 0;
+    padding-left: 5px;
+  }
+}
+
+/* Landscape orientation media query for specific screen sizes (e.g., max-width 767px) */
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .inputContainers {
+    padding-top: 20px;
+  }
+  .encryptContainer {
+    width: 60%;
+    padding: 15px;
+    padding-top: 0px;
+    margin: 10px;
+    padding-bottom: 60px;
+    height: 200px;
+  }
+
+  .encryptTextArea {
+    margin-left: 0px;
+    font-size: medium;
+    width: 50%;
+    height: 20%;
+    padding: 5px;
+  }
+
+  .keyIcon {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .encryptKeyInput {
+    font-size: medium;
+    padding-left: 0px;
+    margin-left: 18px;
+    padding-right: 0px;
+    margin-right: 0px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .encryptKeyContainer {
+    margin-right: 0px;
+    padding-right: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+  }
+
+  .encryptTextAreaContainer {
+    margin-top: 170px;
+    height: 20%;
+  }
+
+  .copyButton {
+    height: 45px;
+    padding: 0px;
+  }
+  .resetButton {
+    height: 40px;
+    padding: 0px;
+  }
+
+  .copyButtonContainer {
+    align-items: center;
+    padding: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .encryptOutputTextArea {
+    padding-top: 0px;
+    margin-top: 5px;
+    height: 30%;
+    margin-right: 0px;
+  }
 }

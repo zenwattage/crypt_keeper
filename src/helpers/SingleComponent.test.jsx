@@ -14,7 +14,7 @@ describe('SingleComponent', () => {
     // find the pages components
     const textarea = screen.getAllByText('encrypt_text');
     const passwordInput = screen.getByLabelText('password');
-    const encryptButton = screen.getByText('Click to Encrypt');
+    const encryptButton = screen.getByText('Encrypt');
 
     // Type in the textarea and password
     userEvent.type(textarea, 'text');
