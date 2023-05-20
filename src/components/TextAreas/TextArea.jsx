@@ -21,6 +21,7 @@ const TextArea = ({ textAreaValue, handleTextAreaChange }) => {
         </Button>
       </div>
       <Form.Control
+        id="encrypt_text"
         aria-label="encrypt_text"
         value={textAreaValue}
         className="encryptTextArea"

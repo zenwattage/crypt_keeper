@@ -12,6 +12,7 @@ const KeyInput = ({
         <BsFillKeyFill size={40} className="keyIcon" />
       </p>
       <input
+        id="encrypt_key"
         type="password"
         aria-label="password"
         value={passwordAreaValue}

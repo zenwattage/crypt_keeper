@@ -17,6 +17,7 @@ const EncryptDecryptButtons = ({
   return (
     <ButtonGroup className="buttonContainer">
       <Button
+        id="encryptButton"
         className={`encryptButton ${encryptedButtonState ? 'encrypted' : ''}`}
         onClick={handleEncryption}
       >
@@ -51,47 +52,5 @@ const EncryptDecryptButtons = ({
     </ButtonGroup>
   );
 };
-
-// const EncryptDecryptButtons = ({
-//   encryptedButtonState,
-//   decryptedButtonState,
-//   handleEncryption,
-//   handleDecryption,
-// }) => {
-//   return (
-//     <div className="buttonContainer">
-//       <div className="encryptButtonContainer">
-//         <button className="encryptButton" onClick={handleEncryption}>
-//           {encryptedButtonState ? (
-//             <>
-//               <BsFillShieldLockFill size={20} className="encryptedIcon" />
-//               Encrypted!
-//             </>
-//           ) : (
-//             <>
-//               <BsFillUnlockFill size={20} className="encryptedIcon" />
-//               <span>Click to Encrypt</span>
-//             </>
-//           )}
-//         </button>
-//       </div>
-//       <div className="decryptButtonContainer">
-//         <button className="decryptButton" onClick={handleDecryption}>
-//           {decryptedButtonState ? (
-//             <>
-//               <BsFillUnlockFill size={20} className="decryptedIcon" />
-//               Decrypted!
-//             </>
-//           ) : (
-//             <>
-//               <BsFillShieldLockFill size={20} className="decryptedIcon" />
-//               Click to Decrypt
-//             </>
-//           )}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default EncryptDecryptButtons;

@@ -4,7 +4,7 @@ import { BsFillUnlockFill, BsFillShieldLockFill } from 'react-icons/bs';
 
 function EncryptButton({ onClick, encrypted }) {
   return (
-    <button className="encryptButton" onClick={onClick}>
+    <button id="encryptButton" className="encryptButton" onClick={onClick}>
       {encrypted ? (
         <>
           <BsFillShieldLockFill size={20} />
