@@ -34,6 +34,7 @@ const EncryptDecryptButtons = ({
         )}
       </Button>
       <Button
+        id="decryptButton"
         className={`decryptButton ${decryptedButtonState ? 'decrypted' : ''}`}
         onClick={handleDecryption}
       >

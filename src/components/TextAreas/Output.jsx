@@ -17,6 +17,7 @@ const Output = ({ outputText, handleCopyClick, resetAll, hiddenTextArea }) => {
           Copy
         </Button>
         <Button
+          id="resetButton"
           variant="primary"
           size="sm"
           className="resetButton"
@@ -27,6 +28,8 @@ const Output = ({ outputText, handleCopyClick, resetAll, hiddenTextArea }) => {
         </Button>
       </div>
       <textarea
+        id="outputTextArea"
+        name="outputTextArea"
         aria-label="text"
         className="encryptOutputTextArea"
         type="text"
