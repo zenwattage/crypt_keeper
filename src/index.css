@@ -12,6 +12,7 @@ body {
   /* background-image: url('./images/cyber-network.jpg'); */
   /* background-image: url('./images/peakpx.jpg'); */
   background-image: url('./images/ITAR.jpg');
+  height: 100%;
   background-color: black;
   background-size: cover;
   margin: 0;

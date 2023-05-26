@@ -112,10 +112,5 @@ describe('spec.cy.js', () => {
     cy.get('.resetButton').click();
 
 
-
-
-
-
-
   });
 })
